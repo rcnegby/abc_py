@@ -27,6 +27,8 @@ void initAbcInterfaceAPI(py::module &m)
                 py::arg("l") = false, py::arg("z") = false)
         .def("refactor", &PROJECT_NAMESPACE::AbcInterface::refactor, "refactor action",
                 py::arg("n") = -1, py::arg("l") = false, py::arg("z") = false)
+        .def("command",  &PROJECT_NAMESPACE::AbcInterface::command,  "run ABC shell command",
+                py::arg("cmd"))
         .def("compress2rs", &PROJECT_NAMESPACE::AbcInterface::compress2rs)
         .def("aigNode", &PROJECT_NAMESPACE::AbcInterface::aigNode, "Get one AigNode")
         .def("numNodes", &PROJECT_NAMESPACE::AbcInterface::numNodes, "Get the number of nodes");

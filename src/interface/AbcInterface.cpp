@@ -211,6 +211,11 @@ bool AbcInterface::refactor(IntType n, bool l, bool z)
     return true;
 }
 
+bool AbcInterface::command(const std::string &cmd)
+{
+    return !Cmd_CommandExecute(_pAbc, cmd.c_str());
+}
+
 bool AbcInterface::compress2rs()
 {
 

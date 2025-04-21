@@ -225,6 +225,7 @@ class AbcInterface
         /*------------------------------*/ 
         /// @brief compress2rs "b -l; rs -K 6 -l; rw -l; rs -K 6 -N 2 -l; rf -l; rs -K 8 -l; b -l; rs -K 8 -N 2 -l; rw -l; rs -K 10 -l; rwz -l; rs -K 10 -N 2 -l; b -l; rs -K 12 -l; rfz -l; rs -K 12 -N 2 -l; rwz -l; b -l
         /// @return if successful
+        bool command(const std::string &cmd);
         bool compress2rs();
         /*------------------------------*/ 
         /* Query the information        */
